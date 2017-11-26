@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>soulsjie</title>
+	<link href="{CSS_PATH}bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="{CSS_PATH}boke.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+  <!---->
+  <!--导航栏开始-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+				<li><a href="#"><span class="heads"><span class="glyphicon glyphicon-leaf"></span> 恺 翾 – </span><span class="heads2">SOULSJIE</span></a></li>
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class=" label label-default">首页</span></a></li>
+				<li><a href="{$CATEGORYS[9][url]}" class="more"><span class=" label label-primary">{$CATEGORYS[9][catname]}</span></a></li>
+				<li><a href="{$CATEGORYS[10][url]}" class="more"><span class=" label label-success">{$CATEGORYS[10][catname]}</span></a></li>
+				<li><a href="{$CATEGORYS[11][url]}" class="more"><span class=" label label-warning">{$CATEGORYS[11][catname]}</span></a></li>
+				<li><a href="{$CATEGORYS[12][url]}" class="more"><span class=" label label-danger">{$CATEGORYS[12][catname]}</span></a></li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav> 
+	<!--导航栏结束-->
+	<!--内容开始-->
+	<div class="container">
+	<div class="row">	  
+		  <!--栏目1-->
+		  <div class="col-md-3 ">
+			  <div class="list-group">
+				  <a href="#" class="list-group-item active">
+					{$CATEGORYS[9][catname]}
+				  </a>
+				  {pc:content  action="lists" catid="9" order="id DESC" num="8"}
+					   {loop $data $k $v}  		   
+						  <a href="{$v[url]}" class="list-group-item" title="{$v[title]}" target="_blank"{title_style($v[style])}>{str_cut($v[title], 40)}</a>
+						{/loop}   
+				  {/pc}
+			  </div>
+		  </div>
+		  <!--栏目2-->
+		  <div class="col-md-3 ">
+			<div class="list-group">
+				  <a href="#" class="list-group-item list-group-item-success active">
+					{$CATEGORYS[10][catname]}
+				  </a>
+				  {pc:content  action="lists" catid="10" order="id DESC" num="8"}
+					   {loop $data $k $v}  		   
+						  <a href="{$v[url]}" class="list-group-item" title="{$v[title]}" target="_blank"{title_style($v[style])}>{str_cut($v[title], 40)}</a>
+						{/loop}   
+				  {/pc}
+			 </div>
+		  </div>
+		  <!--栏目3-->
+		  <div class="col-md-3 ">
+			<div class="list-group">
+				  <a href="#" class="list-group-item list-group-item-warning active">
+					{$CATEGORYS[11][catname]}
+				  </a>
+				  {pc:content  action="lists" catid="11" order="id DESC" num="8"}
+					   {loop $data $k $v}  		   
+						  <a href="{$v[url]}" class="list-group-item" title="{$v[title]}" target="_blank"{title_style($v[style])}>{str_cut($v[title], 40)}</a>
+						{/loop}   
+				  {/pc}
+			 </div>
+		  </div>
+		  <!--栏目4-->
+		  <div class="col-md-3 ">
+			<div class="list-group">
+				  <a href="#" class="list-group-item list-group-item-danger active">
+					{$CATEGORYS[12][catname]}
+				  </a>
+				  {pc:content  action="lists" catid="12" order="id DESC" num="8"}
+					   {loop $data $k $v}  		   
+						  <a href="{$v[url]}" class="list-group-item" title="{$v[title]}" target="_blank"{title_style($v[style])}>{str_cut($v[title], 40)}</a>
+						{/loop}   
+				  {/pc}
+			 </div>
+		  </div>
+		</div>
+		
+	<div class="row">
+	  <div class="col-sm-4 col-md-4">
+		<div class="thumbnail hui">
+		{pc:content  action="lists" catid="9" order="id DESC" num="1"}
+			{loop $data $k $v} 
+		  <img src="{thumb($v['thumb'])}" alt="..." class="img-circle">
+		  <div class="caption">
+			<p><a href="{$v[url]}"title="{$v[title]}" target="_blank"{title_style($v[style])}>{str_cut($v[title], 40)}</a></p>
+		  </div>
+			{/loop}   
+		{/pc}
+		</div>
+	  </div>
+	  
+	  <div class="col-sm-4 col-md-4">
+		<div class="thumbnail hui">
+		{pc:content  action="lists" catid="9" order="id DESC" num="1"}
+			{loop $data $k $v} 
+		  <img src="{thumb($v['thumb'])}" alt="..." class="img-circle">
+		  <div class="caption">
+			<p><a href="{$v[url]}"title="{$v[title]}" target="_blank"{title_style($v[style])}>{str_cut($v[title], 40)}</a></p>
+		  </div>
+			{/loop}   
+		{/pc}
+		</div>
+	  </div>
+	  
+	  <div class="col-sm-4 col-md-4">
+		<div class="thumbnail hui">
+		{pc:content  action="lists" catid="9" order="id DESC" num="1"}
+			{loop $data $k $v} 
+		  <img src="{thumb($v['thumb'])}" alt="..." class="img-circle">
+		  <div class="caption">
+			<p><a href="{$v[url]}"title="{$v[title]}" target="_blank"{title_style($v[style])}>{str_cut($v[title], 40)}</a></p>
+		  </div>
+			{/loop}   
+		{/pc}
+		</div>
+	  </div>
+	</div>
+		
+	</div>
+
+	<!--footer-->
+	<footer class="bs-docs-footer dibu">
+	  <div class="container">
+		<ul class="bs-docs-footer-links">
+		  <li><a href="https://github.com/twbs/bootstrap">GitHub 仓库</a></li>
+		  <li><a href="../getting-started/#examples">实例</a></li>
+		  <li><a href="http://www.youzhan.org">优站精选</a></li>
+		  <li><a href="../about/">关于</a></li>
+		</ul>
+
+		<p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+
+		<p>本项目源码受 <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>开源协议保护，文档受 <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a> 开源协议保护。</p>
+
+	  </div>
+	</footer>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{JS_PATH}bootstrap.min.js"></script>
+  </body>
+</html>
