@@ -9,8 +9,9 @@
 	<link href="<?php echo CSS_PATH;?>boke.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+  <!---->
   <!--导航栏开始-->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top head_btm">
 		  <div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -25,7 +26,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			  <ul class="nav navbar-nav">
-				<li><a href="#"><span class="heads"><span class="glyphicon glyphicon-leaf"></span> 恺 翾 – </span><span class="heads2">SOULSJIE</span></a></li>
+				<li><a href="#"><span class="heads"><span class="glyphicon glyphicon-leaf"></span> 恺 翾 – </span><span class="heads2">SOULSJIE学习笔记</span></a></li>
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right">
 				<li><a href="#"><span class=" label label-default">首页</span></a></li>
@@ -39,7 +40,27 @@
 		</nav> 
 	<!--导航栏结束-->
 	<!--内容开始-->
+	<!--<div class="row">
+		<div class="col-md-12 ss">
+			<img src="<?php echo IMG_PATH;?>bg.jpg">
+		</div>
+	</div>-->
 	<div class="container">
+	<div class="row">
+	  <div class="col-sm-4 col-md-4 text-center">
+		<img src="<?php echo IMG_PATH;?>01.png">
+		<p><h3>相册</h3></p>
+	  </div>
+	  <div class="col-sm-4 col-md-4 text-center">
+		<img src="<?php echo IMG_PATH;?>02.png">
+		<p><h3>师资队伍</h3></p>
+	  </div>
+	  <div class="col-sm-4 col-md-4 text-center">
+		<img src="<?php echo IMG_PATH;?>03.png">
+		<p><h3>教学动态</h3></p>
+	  </div>
+	  </div>
+	<!--栏目展示版块-->
 	<div class="row">	  
 		  <!--栏目1-->
 		  <div class="col-md-3 ">
@@ -47,7 +68,7 @@
 				  <a href="#" class="list-group-item active">
 					<?php echo $CATEGORYS['9']['catname'];?>
 				  </a>
-				  <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e442b12ab249928be35300386b1730ab&action=lists&catid=9&order=id+DESC&num=8\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'9','order'=>'id DESC','limit'=>'8',));}?>
+				  <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e442b12ab249928be35300386b1730ab&action=lists&catid=9&order=id+DESC&num=8\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'9','order'=>'id DESC','limit'=>'8',));}?>
 					   <?php $n=1; if(is_array($data)) foreach($data AS $k => $v) { ?>  		   
 						  <a href="<?php echo $v['url'];?>" class="list-group-item" title="<?php echo $v['title'];?>" target="_blank"<?php echo title_style($v[style]);?>><?php echo str_cut($v[title], 40);?></a>
 						<?php $n++;}unset($n); ?>   
@@ -60,7 +81,7 @@
 				  <a href="#" class="list-group-item list-group-item-success active">
 					<?php echo $CATEGORYS['10']['catname'];?>
 				  </a>
-				  <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=5c4f1cdf38145c840cb1d1ad0088af1a&action=lists&catid=10&order=id+DESC&num=8\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'10','order'=>'id DESC','limit'=>'8',));}?>
+				  <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=5c4f1cdf38145c840cb1d1ad0088af1a&action=lists&catid=10&order=id+DESC&num=8\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'10','order'=>'id DESC','limit'=>'8',));}?>
 					   <?php $n=1; if(is_array($data)) foreach($data AS $k => $v) { ?>  		   
 						  <a href="<?php echo $v['url'];?>" class="list-group-item" title="<?php echo $v['title'];?>" target="_blank"<?php echo title_style($v[style]);?>><?php echo str_cut($v[title], 40);?></a>
 						<?php $n++;}unset($n); ?>   
@@ -73,7 +94,7 @@
 				  <a href="#" class="list-group-item list-group-item-warning active">
 					<?php echo $CATEGORYS['11']['catname'];?>
 				  </a>
-				  <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e9cce924b920ac570dcdbc3fa52592f8&action=lists&catid=11&order=id+DESC&num=8\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'11','order'=>'id DESC','limit'=>'8',));}?>
+				  <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e9cce924b920ac570dcdbc3fa52592f8&action=lists&catid=11&order=id+DESC&num=8\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'11','order'=>'id DESC','limit'=>'8',));}?>
 					   <?php $n=1; if(is_array($data)) foreach($data AS $k => $v) { ?>  		   
 						  <a href="<?php echo $v['url'];?>" class="list-group-item" title="<?php echo $v['title'];?>" target="_blank"<?php echo title_style($v[style]);?>><?php echo str_cut($v[title], 40);?></a>
 						<?php $n++;}unset($n); ?>   
@@ -86,7 +107,7 @@
 				  <a href="#" class="list-group-item list-group-item-danger active">
 					<?php echo $CATEGORYS['12']['catname'];?>
 				  </a>
-				  <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=02dd38554d306c99dd109792be1b7004&action=lists&catid=12&order=id+DESC&num=8\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'12','order'=>'id DESC','limit'=>'8',));}?>
+				  <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=02dd38554d306c99dd109792be1b7004&action=lists&catid=12&order=id+DESC&num=8\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'12','order'=>'id DESC','limit'=>'8',));}?>
 					   <?php $n=1; if(is_array($data)) foreach($data AS $k => $v) { ?>  		   
 						  <a href="<?php echo $v['url'];?>" class="list-group-item" title="<?php echo $v['title'];?>" target="_blank"<?php echo title_style($v[style]);?>><?php echo str_cut($v[title], 40);?></a>
 						<?php $n++;}unset($n); ?>   
@@ -94,55 +115,28 @@
 			 </div>
 		  </div>
 		</div>
-		
+	<!--图片新闻版块-->	
 	<div class="row">
-	  <div class="col-sm-4 col-md-4">
-		<div class="thumbnail hui">
-		<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e3ad91ea47bd1a917553db40d16bfe7a&action=lists&catid=9&order=id+DESC&num=1\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'9','order'=>'id DESC','limit'=>'1',));}?>
+	<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=32f6fc7e0f7afd0d57106c91c4507cef&action=lists&catid=13&order=id+DESC&num=4\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'13','order'=>'id DESC','limit'=>'4',));}?>
 			<?php $n=1; if(is_array($data)) foreach($data AS $k => $v) { ?> 
-		  <img src="<?php echo thumb($v['thumb']);?>" alt="..." class="img-circle">
+	  <div class="col-sm-3 col-md-3">
+		<div class="thumbnail">
+		  <a href="<?php echo $v['url'];?>"title="<?php echo $v['title'];?>" target="_blank"<?php echo title_style($v[style]);?>><img src="<?php echo thumb($v['thumb']);?>" alt="..." class="img-circle"></a>
 		  <div class="caption">
-			<p><a href="<?php echo $v['url'];?>"title="<?php echo $v['title'];?>" target="_blank"<?php echo title_style($v[style]);?>><?php echo str_cut($v[title], 40);?></a></p>
+			<p class="text-center"><a href="<?php echo $v['url'];?>"title="<?php echo $v['title'];?>" target="_blank"<?php echo title_style($v[style]);?>><?php echo str_cut($v[title], 40);?></a></p>
 		  </div>
-			<?php $n++;}unset($n); ?>   
-		<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
 		</div>
 	  </div>
-	  
-	  <div class="col-sm-4 col-md-4">
-		<div class="thumbnail hui">
-		<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e3ad91ea47bd1a917553db40d16bfe7a&action=lists&catid=9&order=id+DESC&num=1\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'9','order'=>'id DESC','limit'=>'1',));}?>
-			<?php $n=1; if(is_array($data)) foreach($data AS $k => $v) { ?> 
-		  <img src="<?php echo thumb($v['thumb']);?>" alt="..." class="img-circle">
-		  <div class="caption">
-			<p><a href="<?php echo $v['url'];?>"title="<?php echo $v['title'];?>" target="_blank"<?php echo title_style($v[style]);?>><?php echo str_cut($v[title], 40);?></a></p>
-		  </div>
-			<?php $n++;}unset($n); ?>   
-		<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
-		</div>
-	  </div>
-	  
-	  <div class="col-sm-4 col-md-4">
-		<div class="thumbnail hui">
-		<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e3ad91ea47bd1a917553db40d16bfe7a&action=lists&catid=9&order=id+DESC&num=1\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'9','order'=>'id DESC','limit'=>'1',));}?>
-			<?php $n=1; if(is_array($data)) foreach($data AS $k => $v) { ?> 
-		  <img src="<?php echo thumb($v['thumb']);?>" alt="..." class="img-circle">
-		  <div class="caption">
-			<p><a href="<?php echo $v['url'];?>"title="<?php echo $v['title'];?>" target="_blank"<?php echo title_style($v[style]);?>><?php echo str_cut($v[title], 40);?></a></p>
-		  </div>
-			<?php $n++;}unset($n); ?>   
-		<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
-		</div>
-	  </div>
+	  <?php $n++;}unset($n); ?>   
+    <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
 	</div>
-		
-	</div>
+</div>
 
 	<!--footer-->
 	<footer class="bs-docs-footer dibu">
 	  <div class="container">
 		<ul class="bs-docs-footer-links">
-		  <li><a href="https://github.com/twbs/bootstrap">GitHub 仓库</a></li>
+		  <li><a href="https://github.com/twbs/bootstrap">ss 仓库</a></li>
 		  <li><a href="../getting-started/#examples">实例</a></li>
 		  <li><a href="http://www.youzhan.org">优站精选</a></li>
 		  <li><a href="../about/">关于</a></li>
@@ -153,8 +147,12 @@
 		<p>本项目源码受 <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>开源协议保护，文档受 <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a> 开源协议保护。</p>
 
 	  </div>
+	  <!--联系我们-->
+	  <div class="message">lianxiwomen</div>
 	</footer>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="<?php echo JS_PATH;?>bootstrap.min.js"></script>
+	<script src="<?php echo JS_PATH;?>jquery-3.2.1.min.js"></script>
+	<script src="<?php echo JS_PATH;?>boke.js"></script>
   </body>
 </html>

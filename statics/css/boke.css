@@ -1,7 +1,20 @@
 body{
 	padding-top:70px;
-	background:#b3b3b3;
-	
+	background:#fff;
+	margin:0px;
+}
+/*.ss img{
+	width:100%;
+	height:initial;
+	margin:0 0 20px 0;
+}*/
+.text_ch{
+	background:rgb(91,192,222);
+	color:rgb(255,255,255);
+}
+
+ul.navbar-right li span{
+	font-size:14px;	
 }
 .heads{
 	color:#000;
@@ -16,6 +29,33 @@ body{
 .dibu{
 	background:#f8f8f8;
 }
-.hui{
-	background:#c0c0c0;
+.caption a{
+	color:rgb(51,122,183);
+	font-weight:bold;
+	font-size:14px;
+}
+.caption a:hover{
+	color:rgb(169,68,66);
+	font-weight:bold;
+	font-size:15px;
+	text-decoration: none;
+}
+.text-center img{
+	width:40%;	
+}
+.text-center{
+	color:#000;	
+}
+.head_btm{
+	border-bottom:solid 3px rgb(169,68,66);
+}
+.message{
+	position:fixed;
+	right:10px;
+	bottom:10px;
+	width:100px;
+	height:30px;
+	background:#f00;
+	
+	
 }
