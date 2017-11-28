@@ -3,32 +3,28 @@ body{
 	background:#fff;
 	margin:0px;
 }
-/*.ss img{
-	width:100%;
-	height:initial;
-	margin:0 0 20px 0;
-}*/
+/*导航栏鼠标上移*/
 .text_ch{
 	background:rgb(91,192,222);
 	color:rgb(255,255,255);
 }
-
+/*导航栏文本*/
 ul.navbar-right li span{
-	font-size:14px;	
+	font-size:16px;	
 }
+/*网站标题大号*/
 .heads{
 	color:#000;
 	font-weight:bold;
 	font-size:20px;	
 }
+/*网站标题小号*/
 .heads2{
 	color:#000;
 	font-weight:bold;
 	font-size:16px;	
 }
-.dibu{
-	background:#f8f8f8;
-}
+/*图片新闻链接字体*/
 .caption a{
 	color:rgb(51,122,183);
 	font-weight:bold;
@@ -40,22 +36,58 @@ ul.navbar-right li span{
 	font-size:15px;
 	text-decoration: none;
 }
+/*图片新闻图片样式*/
 .text-center img{
-	width:40%;	
+	width:75px;
+	cursor:pointer;
 }
 .text-center{
 	color:#000;	
 }
+/*导航底部线条*/
 .head_btm{
 	border-bottom:solid 3px rgb(169,68,66);
 }
+.text-center a{
+	color:#000;
+	text-decoration: none;
+}
+.text-center a:hover{	
+	color:rgb(169,68,66);
+}
+.img_scllo img{
+	width:100%;
+	max-height:200px;
+}
+/*底部*/
+.dibu{
+	background:#f8f8f8;
+}
+/*联系信息*/
 .message{
 	position:fixed;
-	right:10px;
-	bottom:10px;
+	right:25px;
+	bottom:50px;
+	width:50px;
+	height:50px;
+	text-align:center;
+}
+.qr_code{
+	position:fixed;
+	right:80px;
+	bottom:25px;
 	width:100px;
-	height:30px;
-	background:#f00;
-	
-	
+	height:100px;
+	text-align:center;
+	display:none;
+}
+.qr_code img{
+	width:100px;
+	height:100px;
+	cursor:pointer;
+}
+.message img{
+	width:50px;
+	height:50px;
+	cursor:pointer;
 }
